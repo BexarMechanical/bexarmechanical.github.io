@@ -1,32 +1,590 @@
 [
   {
-    "src": "/images/carousel/install-heatpump.jpg",
-    "alt": "New high-efficiency heat pump installed with tidy line set and pad",
-    "caption": "High‑efficiency heat pump installation",
+    "src": "/images/carousel/20240523_111040.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
     "link": "#services"
   },
   {
-    "src": "/images/carousel/furnace-tuneup.jpg",
-    "alt": "Technician checking gas furnace with manometer and meter",
-    "caption": "Seasonal furnace tune‑up",
+    "src": "/images/carousel/20240524_085238.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
     "link": "#services"
   },
   {
-    "src": "/images/carousel/coil-cleaning.jpg",
-    "alt": "Evaporator coil cleaning for improved airflow",
-    "caption": "Evaporator coil cleaning",
+    "src": "/images/carousel/20240524_085244.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
     "link": "#services"
   },
   {
-    "src": "/images/carousel/duct-sealing.jpg",
-    "alt": "Sealing supply ductwork joints for better efficiency",
-    "caption": "Ductwork sealing & repairs",
+    "src": "/images/carousel/20240615_122145.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
     "link": "#services"
   },
   {
-    "src": "/images/carousel/mini-split.jpg",
-    "alt": "Wall-mounted ductless mini‑split indoor head",
-    "caption": "Ductless mini‑split solutions",
+    "src": "/images/carousel/20240718_150047.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20240724_103509.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20240730_101321.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20240730_101507.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20240801_132409.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20240806_145821.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20240806_151801.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20240806_155144.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20240814_125122.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20240817_204028.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20240822_204701.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20240829_164959.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20240829_190614.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20240829_191006.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20240830_112330.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20240830_112353.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20240830_112359.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20240906_171055.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20240909_113330.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20240911_103642.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20240911_103645.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20240911_112946.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20240911_112949.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20240913_163342.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20240914_072443.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20240924_172954.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20240925_121955.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20240925_122042.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20240926_103218.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20240926_111244.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20240926_133408.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20241023_054455.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20241023_073919.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20241023_074959.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20241023_075006.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20241023_111736.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20241025_195305.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20241025_210452.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20241026_142317.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20241104_092120.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20241217_110256.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20241217_110318.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20241217_113329.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20250103_105025.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20250106_154514.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20250108_100154.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20250108_110641.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20250108_113641.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20250108_143324.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20250109_122158.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20250109_143948.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20250110_141229.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20250113_140157.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20250113_140246.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20250113_154026.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20250122_085155.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20250124_105818.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20250209_110108.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20250211_111249.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20250213_114704.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20250321_071002.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20250324_125919.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20250325_150004.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20250327_103858.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20250404_173718.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20250511_075919.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20250511_081113.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20250513_163910.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20250513_165123.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20250513_183101.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20250513_193613.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20250522_093422.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20250522_094426.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20250526_223425.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20250528_144244.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20250531_120624.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20250602_125834.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20250603_114817.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20250605_112407.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20250613_103248.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20250617_160154.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20250710_120703.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20250716_182806.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20250814_193014.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20250828_163515.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20250903_175515.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20250904_124832.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20250906_112134.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20250921_162111.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20251023_164752.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20251025_112712.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/20251025_112724.jpg",
+    "alt": "Photo",
+    "caption": "Photo",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/Screenshot 2024-03-07 112736.png",
+    "alt": "Screenshot",
+    "caption": "Screenshot",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/Tom Jones Cond Coils.jpeg",
+    "alt": "Tom Jones Cond Coils",
+    "caption": "Tom Jones Cond Coils",
     "link": "#services"
   }
 ]
