@@ -1,0 +1,32 @@
+[
+  {
+    "src": "/images/carousel/install-heatpump.jpg",
+    "alt": "New high-efficiency heat pump installed with tidy line set and pad",
+    "caption": "High‑efficiency heat pump installation",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/furnace-tuneup.jpg",
+    "alt": "Technician checking gas furnace with manometer and meter",
+    "caption": "Seasonal furnace tune‑up",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/coil-cleaning.jpg",
+    "alt": "Evaporator coil cleaning for improved airflow",
+    "caption": "Evaporator coil cleaning",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/duct-sealing.jpg",
+    "alt": "Sealing supply ductwork joints for better efficiency",
+    "caption": "Ductwork sealing & repairs",
+    "link": "#services"
+  },
+  {
+    "src": "/images/carousel/mini-split.jpg",
+    "alt": "Wall-mounted ductless mini‑split indoor head",
+    "caption": "Ductless mini‑split solutions",
+    "link": "#services"
+  }
+]
