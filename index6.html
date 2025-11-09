@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bexar Mechanical — HVAC in Greater San Antonio</title>
+  <meta name="description" content="Bexar Mechanical provides residential and commercial HVAC service, installs, and maintenance in Greater San Antonio." />
+  <link rel="preload" as="image" href="images/featured/hero.jpg">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.png" type="image/png" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/">
+        <span class="brand-flag" aria-hidden="true"></span>
+        <span class="brand-text">Bexar <b>Mechanical</b></span>
+      </a>
+      <nav class="nav">
+        <a href="#services" class="btn btn-link">Services</a>
+        <a href="#map" class="btn btn-link">Work Map</a>
+        <a href="#about" class="btn btn-link">About</a>
+        <a href="#contact" class="btn btn-primary">Request Service</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO (one-up) -->
+  <section class="hero one-up">
+    <picture>
+      <img src="images/featured/hero.jpg" alt="Technician servicing a rooftop HVAC unit with city skyline in background" loading="eager">
+    </picture>
+    <div class="overlay">
+      <h1>Comfort. Reliability. <span class="accent">USA-Proud</span> HVAC.</h1>
+      <p>Serving homes & businesses across Greater San Antonio.</p>
+      <div class="cta-row">
+        <a href="#contact" class="btn btn-primary">Request Service</a>
+        <a href="#services" class="btn btn-outline">See Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST STRIP -->
+  <section class="trust-strip">
+    <div class="container">
+      <ul class="trust-list">
+        <li>Licensed & Insured</li>
+        <li>Residential & Commercial</li>
+        <li>Emergency Service</li>
+        <li>Financing Available</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="section container">
+    <header class="section-head">
+      <h2>HVAC Services</h2>
+      <p>Repairs, installs, and maintenance tailored to Texas heat.</p>
+    </header>
+
+    <div class="cards">
+      <article class="card">
+        <h3>Repair</h3>
+        <p>Fast diagnostics and expert fixes for AC & heating systems.</p>
+      </article>
+      <article class="card">
+        <h3>Installation</h3>
+        <p>High-efficiency systems sized and installed the right way.</p>
+      </article>
+      <article class="card">
+        <h3>Maintenance</h3>
+        <p>Seasonal tune-ups that reduce breakdowns and bills.</p>
+      </article>
+      <article class="card">
+        <h3>Commercial</h3>
+        <p>RTUs, split systems, and building comfort solutions.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- One-up Feature Image #1 -->
+  <section class="one-up">
+    <img src="images/featured/attic-install.jpg" alt="Clean attic HVAC install with sealed ductwork" loading="lazy">
+    <figcaption class="caption">Clean installs with airtight ductwork and proper airflow.</figcaption>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section container">
+    <header class="section-head">
+      <h2>Why Bexar Mechanical?</h2>
+    </header>
+    <div class="grid two">
+      <div>
+        <p>We’re local, skilled, and straight-shooting. Our techs follow industry best practices and keep you informed every step of the way.</p>
+        <ul class="checklist">
+          <li>Upfront pricing—no surprises</li>
+          <li>Quality parts & workmanship</li>
+          <li>Respect for your home or job site</li>
+          <li>Warranty support</li>
+        </ul>
+      </div>
+      <div class="about-callout">
+        <strong>Service Area</strong>
+        <p>San Antonio • Boerne • New Braunfels • Schertz • Seguin • and more</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- One-up Feature Image #2 -->
+  <section class="one-up">
+    <img src="images/featured/condensing-unit.jpg" alt="Outdoor condensing unit install with level pad and tidy lineset" loading="lazy">
+    <figcaption class="caption">Level pads, tidy line sets, and pro-grade details.</figcaption>
+  </section>
+
+    <!-- Map -->
+    <section id="map" class="section">
+    <div class="container">
+        <header class="section-head">
+        <h2>Where We’ve Done Work</h2>
+        <p>Explore recent jobs across Greater San Antonio.</p>
+        </header>
+    </div>
+
+    <!-- REPLACE the map DIV with this iframe -->
+    <iframe
+        id="work-map"
+        src="https://www.google.com/maps/d/embed?mid=YOUR_MYMAPS_ID"
+        width="100%" height="520" style="border:0; border-top:4px solid #0a3d91; border-bottom:4px solid #c2172c"
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade" aria-label="Map of recent Bexar Mechanical job locations">
+    </iframe>
+
+    <noscript><p class="container">Enable JavaScript to view our interactive work map.</p></noscript>
+    </section>
+
+
+  <!-- One-up Feature Image #3 -->
+  <section class="one-up">
+    <img src="images/featured/rooftop-rtu.jpg" alt="Rooftop unit service with harness and safety setup" loading="lazy">
+    <figcaption class="caption">Commercial rooftop service—safe, efficient, and thorough.</figcaption>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section container">
+    <header class="section-head">
+      <h2>Request Service</h2>
+      <p>Tell us what’s going on—we’ll get you on the schedule.</p>
+    </header>
+
+    <!-- Mailto fallback ensures immediate email to service@bexarmechanical.com -->
+    <form id="service-form" class="form" action="mailto:service@bexarmechanical.com" method="post" enctype="text/plain" novalidate>
+      <div class="grid two">
+        <label class="field">
+          <span>Name</span>
+          <input type="text" name="name" autocomplete="name" required />
+        </label>
+        <label class="field">
+          <span>Phone</span>
+          <input type="tel" name="phone" autocomplete="tel" required />
+        </label>
+      </div>
+      <label class="field">
+        <span>Email</span>
+        <input type="email" name="email" autocomplete="email" required />
+      </label>
+      <label class="field">
+        <span>Address (City/ZIP ok)</span>
+        <input type="text" name="address" autocomplete="address-line1" />
+      </label>
+      <label class="field">
+        <span>Issue</span>
+        <textarea name="message" rows="4" placeholder="AC not cooling, strange noise, maintenance request, etc." required></textarea>
+      </label>
+      <div class="actions">
+        <button type="submit" class="btn btn-primary">Send to service@bexarmechanical.com</button>
+        <small class="muted">Submitting will open your email client. Want a no-client send? See <code>script.js</code> for Formspree instructions.</small>
+      </div>
+    </form>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Bexar Mechanical • San Antonio, TX</p>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#map">Work Map</a>
+        <a href="#about">About</a>
+        <a href="#contact">Request Service</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <!-- Replace YOUR_API_KEY with your Google Maps JavaScript API key -->
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+  <!-- Optional clustering (uncomment if you expect many pins)
+  <script async src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script> -->
+</body>
+</html>
