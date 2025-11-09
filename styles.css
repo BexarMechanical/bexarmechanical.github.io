@@ -668,3 +668,30 @@ a:focus-visible{
 
 .site-footer a{ color:#dbe4ff; text-decoration-color: rgba(255,255,255,.6); }
 .site-footer a:hover{ color:#fff; text-decoration-color:#fff; }
+
+/* === NAV FIX: make header nav match the light theme =================== */
+
+/* Stop the old global 'nav' rule from darkening the header nav */
+.site-header nav,
+.site-header .nav {
+  background: transparent !important;
+  border: 0 !important;
+  padding: 0 !important;
+}
+
+/* Force readable header nav links on the dark header gradient */
+.site-header nav a,
+.site-header .nav a,
+.site-header .nav .btn-link {
+  color: #fff !important;
+  text-decoration-color: rgba(255,255,255,.6);
+}
+.site-header nav a:hover,
+.site-header .nav a:hover,
+.site-header .nav .btn-link:hover {
+  color: #ffebee !important;
+  text-decoration-color: #ffebee;
+}
+
+/* If you're using the old dark nav elsewhere, scope it explicitly */
+.legacy-nav { background-color: #121212; border-bottom: 1px solid #333; padding: 0.75rem 1rem; }
