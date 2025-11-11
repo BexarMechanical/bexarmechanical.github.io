@@ -249,3 +249,7 @@ input:focus, textarea:focus{ box-shadow:0 0 0 4px var(--ring) }
 @media (max-width: 640px){
   .gform-embed { --gform-height: 1300px; } /* taller on phones */
 }
+
+#contact { scroll-margin-top: 80px; } /* adjust to your header height */
+.gform-embed { max-width: 900px; margin-inline: auto; }
+@media (max-width: 640px){ .gform-embed { --gform-height: 1300px; } }
