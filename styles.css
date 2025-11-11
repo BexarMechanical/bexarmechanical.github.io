@@ -253,3 +253,40 @@ input:focus, textarea:focus{ box-shadow:0 0 0 4px var(--ring) }
 #contact { scroll-margin-top: 80px; } /* adjust to your header height */
 .gform-embed { max-width: 900px; margin-inline: auto; }
 @media (max-width: 640px){ .gform-embed { --gform-height: 1300px; } }
+
+/* Big, centered, responsive map card */
+.map-card{
+  /* center it on all viewports */
+  margin: 1rem auto 0;
+
+  /* let it breathe on phones and go large on desktop */
+  width: clamp(320px, 96vw, 1400px);
+
+  /* visuals */
+  background: var(--white, #fff);
+  border-radius: var(--radius, 16px);
+  overflow: hidden;
+  border: 4px solid var(--blue, #0a3d91);              /* brand border */
+  box-shadow: 0 12px 30px rgba(0,0,0,.12);
+}
+
+/* responsive height; nice on phones and desktops */
+.map-embed{
+  display: block;
+  width: 100%;
+  height: clamp(420px, 68vh, 780px);   /* tall on desktop, not tiny on mobile */
+  border: 0;
+}
+
+/* Optional: add the red stripe to echo your theme */
+.map-card{
+  border-top: 4px solid var(--blue, #0a3d91);
+  border-bottom: 4px solid var(--red, #c2172c);
+  border-left: 0;
+  border-right: 0;
+  border-radius: 0;                    /* squared for the stripe look */
+  box-shadow: none;
+}
+
+/* If you prefer rounded corners instead, comment the 3 rules above
+   and keep the original border + box-shadow from .map-card */
