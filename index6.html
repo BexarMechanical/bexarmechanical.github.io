@@ -146,43 +146,28 @@
     <figcaption class="caption">Commercial rooftop service—safe, efficient, and thorough.</figcaption>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="section container">
-    <header class="section-head">
-      <h2>Request Service</h2>
-      <p>Tell us what’s going on—we’ll get you on the schedule.</p>
-    </header>
+    <!-- Google Form embed (replaces the old <form> … </form>) -->
+    <div class="gform-embed" style="--gform-height: 1100px;">
+      <iframe
+        title="Request for Service — Google Form"
+        src="https://docs.google.com/forms/d/e/1FAIpQLSdpAMxJTYJymUqT0n5_nhIXVwgxM-av_ZElKtayaSjTe6sHUg/viewform?embedded=true"
+        width="100%"
+        height="100%"
+        style="border:0; width:100%; min-height: var(--gform-height);"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0"
+        loading="lazy"
+        allowfullscreen>
+        Loading…
+      </iframe>
 
-    <!-- Mailto fallback ensures immediate email to service@bexarmechanical.com -->
-    <form id="service-form" class="form" action="mailto:service@bexarmechanical.com" method="post" enctype="text/plain" novalidate>
-      <div class="grid two">
-        <label class="field">
-          <span>Name</span>
-          <input type="text" name="name" autocomplete="name" required />
-        </label>
-        <label class="field">
-          <span>Phone</span>
-          <input type="tel" name="phone" autocomplete="tel" required />
-        </label>
-      </div>
-      <label class="field">
-        <span>Email</span>
-        <input type="email" name="email" autocomplete="email" required />
-      </label>
-      <label class="field">
-        <span>Address (City/ZIP ok)</span>
-        <input type="text" name="address" autocomplete="address-line1" />
-      </label>
-      <label class="field">
-        <span>Issue</span>
-        <textarea name="message" rows="4" placeholder="AC not cooling, strange noise, maintenance request, etc." required></textarea>
-      </label>
-      <div class="actions">
-        <button type="submit" class="btn btn-primary">Send to service@bexarmechanical.com</button>
-        <small class="muted">Submitting will open your email client. Want a no-client send? See <code>script.js</code> for Formspree instructions.</small>
-      </div>
-    </form>
-  </section>
+      <p class="muted" style="margin-top:.75rem;">
+        Having trouble with the embed? 
+        <a class="link" href="https://docs.google.com/forms/d/e/1FAIpQLSdpAMxJTYJymUqT0n5_nhIXVwgxM-av_ZElKtayaSjTe6sHUg/viewform?usp=sf_link" target="_blank" rel="noopener">Open the form in a new tab</a>.
+      </p>
+    </div>
+
 
   <footer class="site-footer">
     <div class="container">
