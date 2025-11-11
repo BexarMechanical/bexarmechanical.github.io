@@ -270,23 +270,44 @@ input:focus, textarea:focus{ box-shadow:0 0 0 4px var(--ring) }
   box-shadow: 0 12px 30px rgba(0,0,0,.12);
 }
 
-/* responsive height; nice on phones and desktops */
-.map-embed{
-  display: block;
-  width: 100%;
-  height: clamp(420px, 68vh, 780px);   /* tall on desktop, not tiny on mobile */
-  border: 0;
-}
-
-/* Optional: add the red stripe to echo your theme */
+/* Big, centered, responsive map card */
 .map-card{
+  margin: 1rem auto 0;
+  /* use available content width (after body padding), cap on huge screens */
+  width: min(100%, 1400px);
+
+  background: var(--white, #fff);
+  overflow: hidden;
+  /* keep your border style of choice */
   border-top: 4px solid var(--blue, #0a3d91);
   border-bottom: 4px solid var(--red, #c2172c);
   border-left: 0;
   border-right: 0;
-  border-radius: 0;                    /* squared for the stripe look */
+  border-radius: 0;
   box-shadow: none;
 }
 
+.map-embed{
+  display: block;
+  width: 100%;
+  height: clamp(420px, 68vh, 780px);
+  border: 0;
+}
+
+
 /* If you prefer rounded corners instead, comment the 3 rules above
    and keep the original border + box-shadow from .map-card */
+
+   /* ---- Mobile page gutters (left/right padding for the whole page) ---- */
+:root{
+  /* how much horizontal breathing room you want on small screens */
+  --page-gutter: clamp(14px, 4vw, 28px);
+}
+
+/* Add side padding on phones/tablets; includes iPhone notches */
+@media (max-width: 800px){
+  body{
+    padding-left: calc(var(--page-gutter) + env(safe-area-inset-left, 0px));
+    padding-right: calc(var(--page-gutter) + env(safe-area-inset-right, 0px));
+  }
+}
