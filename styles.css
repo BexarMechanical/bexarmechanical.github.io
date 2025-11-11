@@ -311,3 +311,32 @@ input:focus, textarea:focus{ box-shadow:0 0 0 4px var(--ring) }
     padding-right: calc(var(--page-gutter) + env(safe-area-inset-right, 0px));
   }
 }
+
+/* Full-bleed utility: makes a section span the viewport on mobile
+   even though the <body> has side padding (gutters) */
+@media (max-width: 800px){
+  .full-bleed{
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    width: 100vw;
+    max-width: 100vw;
+  }
+
+  /* Restore comfortable inner padding for content inside full-bleed sections */
+  .full-bleed > .container,
+  .full-bleed .overlay{
+    padding-left: calc(var(--page-gutter) + env(safe-area-inset-left, 0px));
+    padding-right: calc(var(--page-gutter) + env(safe-area-inset-right, 0px));
+  }
+
+  /* Ensure hero images actually fill the bleed width */
+  .hero.one-up picture,
+  .hero.one-up img{
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
