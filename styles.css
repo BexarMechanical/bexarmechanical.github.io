@@ -5,6 +5,7 @@
    - Minimal, non-conflicting cascade
    - Brand palette (red/white/blue)
    - Buttons always have white text
+   - Logo scales by width; preserved aspect ratio on mobile
    ========================================================= */
 
 /* ---- Theme tokens ---- */
@@ -72,27 +73,37 @@ a:focus-visible{
   gap:1rem; padding:.75rem 1rem;
 }
 .brand{
-  display:flex; gap:.75rem; align-items:center;
+  display:flex; align-items:center; gap:.75rem;
   color:var(--white); text-decoration:none; font-weight:700;
 }
-.brand-flag{
-  width:28px; height:18px; border-radius:3px;
-  background:
-    linear-gradient(#b3001b,#b3001b) 0 0/100% 33% no-repeat,
-    linear-gradient(#fff,#fff)       0 50%/100% 34% no-repeat,
-    linear-gradient(#0a3d91,#0a3d91) 0 100%/100% 33% no-repeat;
-  outline:2px solid rgba(255,255,255,.35);
+
+/* Use the full logo lockup; scale by width (no distortion) */
+.brand .logo{
+  width: clamp(180px, 48vw, 340px);
+  height: auto;
+  aspect-ratio: 1280 / 501;
+  display: block;
 }
+
+/* Optional: if a flag placeholder exists in markup, hide it */
+.brand-flag{ display:none; }
+
+/* Optional: if brand text remains next to the logo */
 .brand-text b{ color:#fffb }
 
+/* Header nav */
 .nav{ display:flex; gap:.5rem; flex-wrap:wrap }
+
+/* Ensure readable nav links on dark header */
+.site-header .nav a{ color:#fff; text-decoration-color:rgba(255,255,255,.6) }
+.site-header .nav a:hover{ color:#ffebee; text-decoration-color:#ffebee }
 
 /* ---- Buttons (always white text) ---- */
 .btn{
   border:0; border-radius:999px; padding:.6rem 1rem;
   font-weight:600; cursor:pointer; text-decoration:none;
   display:inline-flex; align-items:center; justify-content:center;
-  color:#fff;                                /* force white text */
+  color:#fff; /* force white text */
   transition:
     transform .05s ease,
     box-shadow .2s ease,
@@ -101,19 +112,15 @@ a:focus-visible{
     border-color .2s ease;
 }
 .btn:link,
-.btn:visited{ color:#fff; text-decoration:none } /* defeat visited overrides */
+.btn:visited{ color:#fff; text-decoration:none }
 .btn:hover,
 .btn:focus-visible,
 .btn:active{ color:#fff; text-decoration:none }
 .btn:active{ transform:translateY(1px) }
 
-.btn-link{ background:transparent }                 /* white text from .btn */
+.btn-link{ background:transparent }
 .btn-primary{ background:var(--red); box-shadow:0 8px 22px rgba(194,23,44,.25) }
 .btn-outline{ border:2px solid var(--white); background:transparent }
-
-/* Ensure readable nav links on dark header */
-.site-header .nav a{ color:#fff; text-decoration-color:rgba(255,255,255,.6) }
-.site-header .nav a:hover{ color:#ffebee; text-decoration-color:#ffebee }
 
 /* ---- Hero ---- */
 .hero{
@@ -220,39 +227,19 @@ input:focus, textarea:focus{ box-shadow:0 0 0 4px var(--ring) }
 .site-footer a{ color:#dbe4ff; text-decoration-color:rgba(255,255,255,.6) }
 .site-footer a:hover{ color:#fff; text-decoration-color:#fff }
 
+/* ---- Responsive tweaks ---- */
+@media (max-width: 640px){
+  .site-header .container{ flex-wrap: wrap; gap:.5rem; }
+  .nav{ width:100%; justify-content:center; }
+
+  /* Cap logo height so header stays compact */
+  .brand .logo{
+    max-height:56px;                /* adjust 48–64px as desired */
+    width:min(65vw, 320px);
+  }
+}
+
 /* ---- Motion / a11y ---- */
 @media (prefers-reduced-motion: reduce){
   *{ transition:none !important; animation:none !important }
 }
-
-/* Logo sizing */
-.brand .logo{
-  height: 28px;       /* tweak to taste */
-  width: auto;
-  display: block;
-}
-
-/* (Optional) remove if you no longer want the generated flag box */
-.brand-flag{ display:none; }
-
-/* Logo sizing & alignment */
-.brand{ display:flex; align-items:center; text-decoration:none }
-/* Header logo: scale by width so proportions stay nice on mobile */
-.brand .logo{
-  width: clamp(160px, 50vw, 320px); /* min 160px, grows to 50vw, caps at 320px */
-  height: auto;                     /* preserve aspect ratio */
-  display: block;
-}
-
-/* If you ever bring back brand text next to the image, shrink or hide on small screens */
-/* .brand-text{ font-size:clamp(16px, 2.4vw, 22px); font-weight:700; color:#fff }
-@media (max-width:520px){ .brand-text{ display:none } } */
-
-/* Let the header wrap cleanly on small screens */
-@media (max-width: 640px){
-  .site-header .container{ flex-wrap: wrap; }
-  .nav{ width: 100%; justify-content: center; }
-}
-
-.brand-picture{ display:block; line-height:0 }
-.brand-picture img{ width: clamp(160px, 50vw, 320px); height:auto; display:block }
