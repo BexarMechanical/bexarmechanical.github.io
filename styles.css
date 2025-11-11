@@ -234,3 +234,15 @@ input:focus, textarea:focus{ box-shadow:0 0 0 4px var(--ring) }
 
 /* (Optional) remove if you no longer want the generated flag box */
 .brand-flag{ display:none; }
+
+/* Logo sizing & alignment */
+.brand{ display:flex; align-items:center; text-decoration:none }
+.brand .logo{
+  height: clamp(28px, 5.5vw, 64px); /* responsive: min 28px, max 64px */
+  width: auto;
+  display: block;
+}
+
+/* If you ever bring back brand text next to the image, shrink or hide on small screens */
+/* .brand-text{ font-size:clamp(16px, 2.4vw, 22px); font-weight:700; color:#fff }
+@media (max-width:520px){ .brand-text{ display:none } } */
