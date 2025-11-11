@@ -1,55 +1,64 @@
-/* =========================
-   Bexar Mechanical — styles.css (condensed)
-   ========================= */
+/* =========================================================
+   Bexar Mechanical — styles.css
+   Target: the provided index.html
+   Notes:
+   - Minimal, non-conflicting cascade
+   - Brand palette (red/white/blue)
+   - Buttons always have white text
+   ========================================================= */
 
 /* ---- Theme tokens ---- */
 :root{
-  --blue:#0a3d91;        /* brand blue */
-  --red:#c2172c;         /* brand red */
+  --blue:#0a3d91;      /* brand blue */
+  --red:#c2172c;       /* brand red */
   --white:#fff;
-  --ink:#0f172a;         /* body text */
-  --ink-2:#334155;       /* muted text */
-  --bg:#f8fafc;          /* page background */
+  --ink:#0f172a;       /* body text */
+  --ink-2:#334155;     /* muted text */
+  --bg:#f8fafc;        /* page background */
   --ring:rgba(10,61,145,.25);
   --radius:16px;
 
-  --link:#0a3d91;                          /* global link */
-  --link-hover:#c2172c;                    /* link hover */
+  --link:#0a3d91;
+  --link-hover:#c2172c;
   --link-underline: color-mix(in srgb, var(--link) 55%, transparent);
 }
 
 /* ---- Base / reset ---- */
-*{box-sizing:border-box}
-html,body{margin:0;padding:0}
+*{ box-sizing:border-box }
+html,body{ margin:0; padding:0 }
 body{
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Inter, Arial, sans-serif;
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,Inter,Arial,sans-serif;
   color:var(--ink);
   background:var(--bg);
   line-height:1.55;
 }
-img{max-width:100%;height:auto;display:block}
+img{ max-width:100%; height:auto; display:block }
 
 /* ---- Layout helpers ---- */
-.container{max-width:1100px;margin-inline:auto;padding:0 1rem}
-.section{padding:4rem 0}
-.section-head h2{margin:0 0 .25rem}
-.section-head p{margin:.25rem 0 0;color:var(--ink-2)}
+.container{ max-width:1100px; margin-inline:auto; padding:0 1rem }
+.section{ padding:4rem 0 }
+.section-head h2{ margin:0 0 .25rem }
+.section-head p{ margin:.25rem 0 0; color:var(--ink-2) }
 
-/* ---- Global links ---- */
+/* ---- Global links (non-button) ---- */
 a{
-  color: var(--link);
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 0.15em;
-  text-decoration-color: var(--link-underline);
-  transition: color .15s ease, text-decoration-color .15s ease;
+  color:var(--link);
+  text-decoration:underline;
+  text-decoration-thickness:2px;
+  text-underline-offset:.15em;
+  text-decoration-color:var(--link-underline);
+  transition:color .15s ease, text-decoration-color .15s ease;
 }
 a:hover{
-  color: var(--link-hover);
-  text-decoration-color: var(--link-hover);
+  color:var(--link-hover);
+  text-decoration-color:var(--link-hover);
 }
-a:visited{ color: var(--link); } /* disable purple */
-a:focus-visible{ outline:0; box-shadow:0 0 0 4px var(--ring); border-radius:6px }
+a:visited{ color:var(--link) } /* prevent purple */
+a:focus-visible{
+  outline:0;
+  box-shadow:0 0 0 4px var(--ring);
+  border-radius:6px;
+}
 
 /* ---- Header / brand / nav ---- */
 .site-header{
@@ -59,8 +68,8 @@ a:focus-visible{ outline:0; box-shadow:0 0 0 4px var(--ring); border-radius:6px 
   border-bottom:4px solid var(--red);
 }
 .site-header .container{
-  display:flex; align-items:center; gap:1rem; justify-content:space-between;
-  padding:.75rem 1rem;
+  display:flex; align-items:center; justify-content:space-between;
+  gap:1rem; padding:.75rem 1rem;
 }
 .brand{
   display:flex; gap:.75rem; align-items:center;
@@ -70,35 +79,41 @@ a:focus-visible{ outline:0; box-shadow:0 0 0 4px var(--ring); border-radius:6px 
   width:28px; height:18px; border-radius:3px;
   background:
     linear-gradient(#b3001b,#b3001b) 0 0/100% 33% no-repeat,
-    linear-gradient(#fff,#fff) 0 50%/100% 34% no-repeat,
+    linear-gradient(#fff,#fff)       0 50%/100% 34% no-repeat,
     linear-gradient(#0a3d91,#0a3d91) 0 100%/100% 33% no-repeat;
-  outline:2px solid rgba(255,255,255,.35)
+  outline:2px solid rgba(255,255,255,.35);
 }
-.brand-text b{color:#fffb}
+.brand-text b{ color:#fffb }
 
-.nav{display:flex; gap:.5rem; flex-wrap:wrap}
+.nav{ display:flex; gap:.5rem; flex-wrap:wrap }
 
-/* Buttons */
+/* ---- Buttons (always white text) ---- */
 .btn{
   border:0; border-radius:999px; padding:.6rem 1rem;
   font-weight:600; cursor:pointer; text-decoration:none;
   display:inline-flex; align-items:center; justify-content:center;
-  transition:transform .05s ease, box-shadow .2s ease, background .2s ease, color .2s ease;
+  color:#fff;                                /* force white text */
+  transition:
+    transform .05s ease,
+    box-shadow .2s ease,
+    background-color .2s ease,
+    color .2s ease,
+    border-color .2s ease;
 }
+.btn:link,
+.btn:visited{ color:#fff; text-decoration:none } /* defeat visited overrides */
+.btn:hover,
+.btn:focus-visible,
+.btn:active{ color:#fff; text-decoration:none }
 .btn:active{ transform:translateY(1px) }
-.btn-link{ background:transparent; color:var(--link); padding:.2rem .2rem; border-radius:6px }
-.btn-primary{ background:var(--red); color:var(--white); box-shadow:0 8px 22px rgba(194,23,44,.25) }
-.btn-outline{ border:2px solid var(--white); color:var(--white); background:transparent }
 
-/* Force readable nav links on dark header */
-.site-header .nav a,
-.site-header .nav .btn-link{
-  color:#fff; text-decoration-color:rgba(255,255,255,.6);
-}
-.site-header .nav a:hover,
-.site-header .nav .btn-link:hover{
-  color:#ffebee; text-decoration-color:#ffebee;
-}
+.btn-link{ background:transparent }                 /* white text from .btn */
+.btn-primary{ background:var(--red); box-shadow:0 8px 22px rgba(194,23,44,.25) }
+.btn-outline{ border:2px solid var(--white); background:transparent }
+
+/* Ensure readable nav links on dark header */
+.site-header .nav a{ color:#fff; text-decoration-color:rgba(255,255,255,.6) }
+.site-header .nav a:hover{ color:#ffebee; text-decoration-color:#ffebee }
 
 /* ---- Hero ---- */
 .hero{
@@ -133,8 +148,11 @@ a:focus-visible{ outline:0; box-shadow:0 0 0 4px var(--ring); border-radius:6px 
   gap:1rem; margin-top:1rem;
 }
 .card{
-  background:var(--white); border-radius:var(--radius); padding:1rem;
-  border:1px solid #e6e8ef; box-shadow:0 6px 20px rgba(16,24,40,.04);
+  background:var(--white);
+  border-radius:var(--radius);
+  padding:1rem;
+  border:1px solid #e6e8ef;
+  box-shadow:0 6px 20px rgba(16,24,40,.04);
 }
 .card h3{ margin:.25rem 0 .35rem; color:var(--blue) }
 .card p{ margin:0; color:var(--ink-2) }
@@ -146,7 +164,9 @@ a:focus-visible{ outline:0; box-shadow:0 0 0 4px var(--ring); border-radius:6px 
 .checklist{ margin:.5rem 0 0; padding:0 0 0 1.1rem }
 .about-callout{
   background:linear-gradient(180deg,#fff,#f5f7fb);
-  border:1px solid #e5e7eb; border-radius:var(--radius); padding:1rem;
+  border:1px solid #e5e7eb;
+  border-radius:var(--radius);
+  padding:1rem;
 }
 
 /* ---- One-up features ---- */
@@ -161,17 +181,25 @@ a:focus-visible{ outline:0; box-shadow:0 0 0 4px var(--ring); border-radius:6px 
 /* ---- Map ---- */
 #work-map{
   width:100%; height:min(70vh,680px);
-  border-top:4px solid var(--blue); border-bottom:4px solid var(--red);
+  border-top:4px solid var(--blue);
+  border-bottom:4px solid var(--red);
 }
 
 /* ---- Contact form ---- */
 .form{
-  background:var(--white); border:1px solid #e6e8ef; border-radius:var(--radius); padding:1rem;
+  background:var(--white);
+  border:1px solid #e6e8ef;
+  border-radius:var(--radius);
+  padding:1rem;
 }
 .field{ display:grid; gap:.35rem; margin:.5rem 0 }
 .field span{ font-weight:600 }
 input, textarea{
-  width:100%; padding:.7rem .85rem; border:1px solid #cbd5e1; border-radius:12px; background:#fff;
+  width:100%;
+  padding:.7rem .85rem;
+  border:1px solid #cbd5e1;
+  border-radius:12px;
+  background:#fff;
   outline-color:var(--ring);
 }
 input:focus, textarea:focus{ box-shadow:0 0 0 4px var(--ring) }
@@ -181,7 +209,10 @@ input:focus, textarea:focus{ box-shadow:0 0 0 4px var(--ring) }
 /* ---- Footer ---- */
 .site-footer{
   background:linear-gradient(90deg,#0a3d91,#092b63);
-  color:#e6ecff; padding:2rem 0; border-top:4px solid var(--red); margin-top:3rem;
+  color:#e6ecff;
+  padding:2rem 0;
+  border-top:4px solid var(--red);
+  margin-top:3rem;
 }
 .site-footer .container{
   display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap;
