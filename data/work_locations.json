@@ -1,7 +1,0 @@
-[
-  { "title": "Downtown RTU Service", "lat": 29.4260, "lng": -98.4861, "note": "Belt & bearings, rooftop RTU" },
-  { "title": "Boerne Install", "lat": 29.7947, "lng": -98.7319, "note": "3-ton high-efficiency split system" },
-  { "title": "New Braunfels Tune-Up", "lat": 29.7030, "lng": -98.1245, "note": "Spring maintenance, filter upgrade" },
-  { "title": "Schertz Repair", "lat": 29.5522, "lng": -98.2697, "note": "Capacitor & contactor replacement" },
-  { "title": "Seguin Shop Build-Out", "lat": 29.5688, "lng": -97.9647, "note": "Mini-split installation" }
-]
