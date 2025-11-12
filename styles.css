@@ -24,6 +24,15 @@
   --link-underline: color-mix(in srgb, var(--link) 55%, transparent);
 }
 
+/* Smooth scroll + anchor offset for sticky header */
+html { scroll-behavior: smooth; }
+
+/* Default offset; JS below will update this to match the real header height */
+:root { --anchor-offset: 96px; }
+
+/* Apply to any in-page anchor target (sections with IDs) */
+[id] { scroll-margin-top: var(--anchor-offset); }
+
 /* ---- Base / reset ---- */
 *{ box-sizing:border-box }
 html,body{ margin:0; padding:0 }

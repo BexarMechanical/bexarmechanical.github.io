@@ -186,11 +186,31 @@
       </nav>
     </div>
   </footer>
+  <script>
+    (function () {
+      function setAnchorOffset() {
+        const header = document.querySelector('.site-header');
+        const h = header ? Math.ceil(header.getBoundingClientRect().height) : 0;
+        // Add a little breathing room
+        document.documentElement.style.setProperty('--anchor-offset', (h + 16) + 'px');
+      }
 
+      function rejumpIfHash() {
+        if (location.hash && document.querySelector(location.hash)) {
+          // Re-run anchoring after we know the header height
+          document.querySelector(location.hash).scrollIntoView();
+        }
+      }
+
+      window.addEventListener('load', function () {
+        setAnchorOffset();
+        rejumpIfHash();
+      });
+
+      // Update if header height changes (e.g., responsive wrap)
+      window.addEventListener('resize', setAnchorOffset);
+    })();
+  </script>
   <script src="script.js"></script>
-  <!-- Replace YOUR_API_KEY with your Google Maps JavaScript API key -->
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
-  <!-- Optional clustering (uncomment if you expect many pins)
-  <script async src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script> -->
 </body>
 </html>
