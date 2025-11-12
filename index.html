@@ -187,29 +187,34 @@
     </div>
   </footer>
   <script>
-    (function () {
-      function setAnchorOffset() {
-        const header = document.querySelector('.site-header');
-        const h = header ? Math.ceil(header.getBoundingClientRect().height) : 0;
-        // Add a little breathing room
-        document.documentElement.style.setProperty('--anchor-offset', (h + 16) + 'px');
+  (function () {
+    const MOBILE_Q = '(max-width: 768px)';
+
+    function setAnchorOffset() {
+      const header = document.querySelector('.site-header');
+      const isMobile = window.matchMedia(MOBILE_Q).matches;
+
+      const h = header ? Math.ceil(header.getBoundingClientRect().height) : 0;
+      // Smaller offset on desktop; none on mobile
+      const offset = isMobile ? 0 : Math.max(h - 12, 0);
+      document.documentElement.style.setProperty('--anchor-offset', offset + 'px');
+    }
+
+    function rejumpIfHash() {
+      if (location.hash && document.querySelector(location.hash)) {
+        document.querySelector(location.hash).scrollIntoView({ block: 'start', behavior: 'auto' });
       }
+    }
 
-      function rejumpIfHash() {
-        if (location.hash && document.querySelector(location.hash)) {
-          // Re-run anchoring after we know the header height
-          document.querySelector(location.hash).scrollIntoView();
-        }
-      }
+    window.addEventListener('load', function () {
+      setAnchorOffset();
+      rejumpIfHash();
+    });
 
-      window.addEventListener('load', function () {
-        setAnchorOffset();
-        rejumpIfHash();
-      });
-
-      // Update if header height changes (e.g., responsive wrap)
-      window.addEventListener('resize', setAnchorOffset);
-    })();
+    // Update on resize or when breakpoint flips
+    window.addEventListener('resize', setAnchorOffset);
+    window.matchMedia(MOBILE_Q).addEventListener('change', setAnchorOffset);
+  })();
   </script>
   <script src="script.js"></script>
 </body>
