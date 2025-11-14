@@ -349,3 +349,64 @@ input:focus, textarea:focus{ box-shadow:0 0 0 4px var(--ring) }
     height: auto;
   }
 }
+
+/* ---- Footer ---- */
+.site-footer {
+  background: var(--blue);
+  color: var(--white);
+  padding: 1.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+.site-footer .container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+  text-align: center;
+}
+
+/* Footer nav layout */
+.site-footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  justify-content: center;
+}
+
+/* Footer nav links */
+.site-footer nav a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+/* Underline on hover with brand red */
+.site-footer nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--red);
+  transition: width 0.18s ease-out;
+}
+
+.site-footer nav a:hover::after,
+.site-footer nav a:focus-visible::after {
+  width: 100%;
+}
+
+/* Desktop: put text on left, links on right */
+@media (min-width: 768px) {
+  .site-footer .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+}
