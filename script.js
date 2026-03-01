@@ -88,7 +88,7 @@
       setStatus(data.message || 'Thanks. Your request has been sent.', 'success');
     } catch (error) {
       const message = error instanceof Error ? error.message : 'Unable to send your request right now.';
-      setStatus(message + ' Please call us directly if this is urgent.', 'error');
+      setStatus(message, 'error');
     } finally {
       if (submitBtn) {
         submitBtn.disabled = false;
