@@ -152,26 +152,89 @@
       <p>Tell us what’s going on—we'll take care of you.</p>
     </header>
 
-    <div class="gform-embed" style="--gform-height: 1100px;">
-      <iframe
-        title="Request for Service — Google Form"
-        src="https://docs.google.com/forms/d/e/1FAIpQLSdpAMxJTYJymUqT0n5_nhIXVwgxM-av_ZElKtayaSjTe6sHUg/viewform?embedded=true"
-        width="100%"
-        height="100%"
-        style="border:0; width:100%; min-height: var(--gform-height);"
-        frameborder="0"
-        marginheight="0"
-        marginwidth="0"
-        loading="lazy"
-        allowfullscreen>
-        Loading…
-      </iframe>
+    <form id="service-request-form" class="service-form" action="/api/request-service" method="post" novalidate>
+      <p class="form-intro">Share the job details below and we'll respond quickly to schedule service.</p>
 
-      <p class="muted" style="margin-top:.75rem;">
-        Having trouble with the embed?
-        <a class="link" href="https://docs.google.com/forms/d/e/1FAIpQLSdpAMxJTYJymUqT0n5_nhIXVwgxM-av_ZElKtayaSjTe6sHUg/viewform?usp=sf_link" target="_blank" rel="noopener">Open the form in a new tab</a>.
-      </p>
-    </div>
+      <div class="form-grid">
+        <label class="field">
+          <span>Full Name *</span>
+          <input type="text" name="fullName" autocomplete="name" required maxlength="80">
+        </label>
+
+        <label class="field">
+          <span>Company</span>
+          <input type="text" name="company" autocomplete="organization" maxlength="120">
+        </label>
+
+        <label class="field">
+          <span>Phone *</span>
+          <input type="tel" name="phone" autocomplete="tel" inputmode="tel" required maxlength="25">
+        </label>
+
+        <label class="field">
+          <span>Email *</span>
+          <input type="email" name="email" autocomplete="email" required maxlength="120">
+        </label>
+
+        <label class="field">
+          <span>Service Type *</span>
+          <select name="serviceType" required>
+            <option value="">Select one</option>
+            <option>Repair</option>
+            <option>Maintenance</option>
+            <option>Installation</option>
+            <option>Commercial HVAC</option>
+            <option>Other</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span>Urgency *</span>
+          <select name="urgency" required>
+            <option value="">Select urgency</option>
+            <option value="Emergency">Emergency (Same day)</option>
+            <option value="Priority">Priority (Within 24 hours)</option>
+            <option value="Standard">Standard (1-3 business days)</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span>Service Address *</span>
+          <input type="text" name="address" autocomplete="street-address" required maxlength="150">
+        </label>
+
+        <label class="field">
+          <span>City *</span>
+          <input type="text" name="city" autocomplete="address-level2" required maxlength="80">
+        </label>
+      </div>
+
+      <label class="field">
+        <span>Preferred Callback Window</span>
+        <input type="text" name="preferredWindow" placeholder="Example: Weekdays after 2 PM" maxlength="120">
+      </label>
+
+      <label class="field">
+        <span>What's happening? *</span>
+        <textarea name="message" rows="5" required maxlength="2000" placeholder="Describe the issue, equipment type, and anything urgent."></textarea>
+      </label>
+
+      <label class="check-row">
+        <input type="checkbox" name="consent" required>
+        <span>I agree to be contacted by Bexar Mechanical about this request. *</span>
+      </label>
+
+      <!-- Honeypot + timing guard -->
+      <input type="text" name="website" tabindex="-1" autocomplete="off" class="hp-field" aria-hidden="true">
+      <input type="hidden" name="submittedAt" id="submittedAt">
+
+      <div class="actions">
+        <button id="service-submit" class="btn btn-primary" type="submit">Send Request</button>
+        <p id="form-status" class="form-status muted" role="status" aria-live="polite"></p>
+      </div>
+
+      <p class="muted form-note">For urgent service, call us directly at <a href="tel:+13617041180">(361) 704-1180</a>.</p>
+    </form>
   </section>
 
 
