@@ -1,4 +1,42 @@
-﻿const MIN_FORM_AGE_MS = 3000;
+const MIN_FORM_AGE_MS = 3000;
+const DEFAULT_ALLOWED_ORIGINS = [
+  'https://bexarmechanical.github.io',
+  'https://bexarmechanical-github-io.vercel.app'
+];
+
+function getAllowedOrigins() {
+  const configured = String(process.env.CORS_ALLOWED_ORIGINS || '')
+    .split(',')
+    .map((origin) => origin.trim())
+    .filter(Boolean);
+
+  if (configured.length === 0) {
+    return DEFAULT_ALLOWED_ORIGINS;
+  }
+
+  return configured;
+}
+
+function applyCors(req, res) {
+  const requestOrigin = String(req.headers.origin || '').trim();
+  const allowedOrigins = getAllowedOrigins();
+  const allowAny = allowedOrigins.includes('*');
+  const isAllowedOrigin = allowAny || allowedOrigins.includes(requestOrigin);
+
+  if (allowAny) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+  } else if (isAllowedOrigin) {
+    res.setHeader('Access-Control-Allow-Origin', requestOrigin);
+    res.setHeader('Vary', 'Origin');
+  }
+
+  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  res.setHeader('Access-Control-Max-Age', '86400');
+
+  // Non-browser requests may not send an Origin header.
+  return !requestOrigin || isAllowedOrigin;
+}
 
 function text(value, maxLength) {
   return String(value || '')
@@ -28,8 +66,18 @@ function parseBody(req) {
 }
 
 module.exports = async function handler(req, res) {
+  const originAllowed = applyCors(req, res);
+
+  if (req.method === 'OPTIONS') {
+    return res.status(204).end();
+  }
+
+  if (!originAllowed) {
+    return res.status(403).json({ ok: false, error: 'Origin not allowed.' });
+  }
+
   if (req.method !== 'POST') {
-    res.setHeader('Allow', 'POST');
+    res.setHeader('Allow', 'POST, OPTIONS');
     return res.status(405).json({ ok: false, error: 'Method not allowed.' });
   }
 
